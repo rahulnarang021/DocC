@@ -2,9 +2,9 @@
 
 echo "Copying DocC archives to doc_archives..."
 
-mkdir public
+mkdir docs
 
-$(xcrun --find docc) process-archive transform-for-static-hosting "doc_archives/TruePlan.doccarchive" --hosting-base-path DocC --output-path public
+$(xcrun --find docc) process-archive transform-for-static-hosting "doc_archives/TruePlan.doccarchive" --hosting-base-path DocC --output-path docs
 
 git config user.name "rahulnarang021"
 
@@ -15,15 +15,15 @@ git remote set-url origin https://rahulnarang021:ghp_bnXq5ZeoAFbYGeee1lMMLSXtsVc
 
 git fetch
 
-git stash push -u  -- public doc_archives
+git stash push -u  -- docs
 
 git checkout main
 
-rm -rf public doc_archives
+rm -rf docs
 
 git stash apply
 
-git add public doc_archives
+git add docs
 
 git commit -m "Updated DocC documentation"
 
