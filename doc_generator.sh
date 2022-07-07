@@ -11,7 +11,7 @@ git config user.name "rahulnarang021"
 git config user.email "rahulnarang021@gmail.com"
 
 # Change the GitHub URL to your repository
-git remote set-url origin https://rahulnarang021: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@github.com/rahulnarang021/DocC
+git remote set-url origin https://rahulnarang021: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@github.com/rahulnarang021/DocC
 
 git fetch
 
